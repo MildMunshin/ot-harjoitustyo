@@ -1,5 +1,7 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+I came here to **ACE** these exercises *like a boss*
+
 ## Tehtävät
 
 ### Viikko 1
