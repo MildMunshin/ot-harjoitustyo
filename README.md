@@ -1,5 +1,8 @@
-# Ohjelmistotekniikan harjoitustyö
+# Ohjelmistotekniikka, harjoitustyö
 
-Tämä on **harjoitusrepositorio** kurssille.
+## Tehtävät
 
-Täällä harjoittelen *gitin käyttöä* ja komentorivityökaluja.
+### Viikko 1
+
+[gitlog.txt](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
