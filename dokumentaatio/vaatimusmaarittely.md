@@ -1,4 +1,4 @@
-### Vaatimusmäärittely
+# Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
 
@@ -10,12 +10,12 @@ Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauks
 
 ## Perusversion tarjoama toiminnallisuus
 
-# Ennen kirjautumista
+### Ennen kirjautumista
 
 - Käyttäjä voi luoda tunnuksen, joka on uniikki ja vähintään 5 merkkiä
 - Käyttäjä voi kirjautua sisään oikealla salasanalla. Jos salasana on väärä tai käyttäjää ei olemassa, järjestelmä ilmoittaa tästä.
 
-# Kirjautumisen jälkeen
+### Kirjautumisen jälkeen
 
 - Käyttäjä näkee päivät, joihin saliohjelman eri liikeet on allokoitu
 - Käyttäjä voi luoda, poistaa ja muokata päiviä
