@@ -4,7 +4,7 @@ I came here to **ACE** these exercises *like a boss*
 
 ## Tehtävät
 
-[Laskarit](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit))
+[Laskarit](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit)
 
 ### Viikko 1
 
@@ -14,4 +14,4 @@ I came here to **ACE** these exercises *like a boss*
 
 ### Viikko 2
 
-[Tehtavät](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit)](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit/viikko2))
+[Tehtavät](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit/viikko2)
