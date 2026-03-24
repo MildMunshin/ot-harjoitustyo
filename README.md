@@ -15,3 +15,8 @@ I came here to **ACE** these exercises *like a boss*
 ### Viikko 2
 
 [Tehtavät](https://github.com/MildMunshin/ot-harjoitustyo/tree/master/laskarit/viikko2)
+
+## Dokumentaatio
+
+- [Vaatimusmäärittely](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Työaikakirjanpito](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
