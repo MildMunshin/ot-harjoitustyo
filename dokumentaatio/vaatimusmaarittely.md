@@ -27,6 +27,6 @@ Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauks
 
 ## Jatkokehitysideoita
 
-- Käyttäjä voi luoda useita, moneen päivään allokoituja saliohjelmia
+- Käyttäjä voi luoda useita erilaisia, moneen päivään allokoituja saliohjelmia
 - Käyttäjä pystyy näkemään ja tarkastelemaan kehitystä tietyn ajanjakson aikana, mahdollisesti jopa graafisesti
 - Käyttäjä voi asettaa saliohjelmansa muille käyttäjille näkyväksi ja seurata muiden käyttäjien ohjelmia ja kehitystä
