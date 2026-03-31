@@ -35,7 +35,7 @@ Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehitykses
   ```
 - Luo coverage-raportti:
   ```bash
-  poetry run invoke coverage-raport
+  poetry run invoke coverage-report
   ```
 
 ## Dokumentaatio
