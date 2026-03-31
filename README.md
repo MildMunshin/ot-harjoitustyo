@@ -1,22 +1,24 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+## Sovelluksen kuvaus
+
+Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehityksestään. Sovelluksessa käyttäjä voi määritellä itselleen useasta eri päivästä koostuvan saliohjelman. Jokaiselle päivälle voi määritellä tietyt liikkeet, niiden toistokerrat ja käytetyt painot. Sovelluksen avulla käyttäjä pystyy seuraamaan mikä päiväohjelma on seuraavaksi, millä painoilla ja toistoilla liikkeitä on tehty sekä päivittämään niiden arvoja.
+
 ## Asennus
 
 - Asenna riippuvuudet:
   ```bash
   poetry install
   ```
-
 - Alusta tietokanta:
   ```bash
   poetry run python -m src.initialize_database
   ```
-
 - Käynnistä sovellus:
   ```bash
   poetry run invoke start
   ```
-
+  
 ## Lisätoiminnot
 
 - Testaus:
