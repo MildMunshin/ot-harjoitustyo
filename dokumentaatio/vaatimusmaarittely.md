@@ -1,9 +1,5 @@
 # Vaatimusmäärittely
 
-## Sovelluksen kuvaus
-
-Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehityksestään. Sovelluksessa käyttäjä voi määritellä itselleen useasta eri päivästä koostuvan saliohjelman. Jokaiselle päivälle voi määritellä tietyt liikkeet, niiden toistokerrat ja käytetyt painot. Sovelluksen avulla käyttäjä pystyy seuraamaan mikä päiväohjelma on seuraavaksi, millä painoilla ja toistoilla liikkeitä on tehty sekä päivittämään niiden arvoja.
-
 ## Käyttöliittymäluonnos
 
 Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauksena voi siirtyä itse sovellusnäkymään. Sovellusnäkymässä on esillä linkit jokaiseen päiväohjelmaan, ja ehkä myös osoitin joka kertoo mikä päivä on vuorossa seuraavaksi. Tiettyä päivää klikkaamalla pääsee näkemään kyseisenä päivänä vuorossa olevat liikeet, niiden toistot ja painot. Tässä näkymässä tulisi myös olla mahdollisuus muokata tehtäviä liikkeitä ja niiden toistomääriä ja painoja.
