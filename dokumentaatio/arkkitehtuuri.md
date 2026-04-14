@@ -41,5 +41,10 @@ classDiagram
 
     class UI
     UI -- User
-UI --> Services
+UI --> DayService
+UI --> UserService
+UI --> ExerciseService
+DayRepository "1" --> "1" DayService
+UserRepository "1" --> "1" UserService
+ExerciseRepository "1" --> "1" ExerciseService
 ```
