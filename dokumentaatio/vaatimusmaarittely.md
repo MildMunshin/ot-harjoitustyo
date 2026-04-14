@@ -6,13 +6,13 @@ Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauks
 
 ## Toiminnalisuus
 
-- Käyttäjä voi luoda tunnuksen, joka on uniikki ja vähintään 5 merkkiä
-- Käyttäjä voi kirjautua sisään oikealla salasanalla. Jos salasana on väärä tai käyttäjää ei olemassa, järjestelmä ilmoittaa tästä.
-- Onnistuneen kirjautumisen jälkeen käyttäjä näkee päivät, joihin saliohjelman eri liikeet on allokoitu
+- Käyttäjä voi luoda tunnuksen, joka on uniikki ja vähintään 5 merkkiä [OSITTAIN TEHTY]
+- Käyttäjä voi kirjautua sisään oikealla salasanalla. Jos salasana on väärä tai käyttäjää ei olemassa, järjestelmä ilmoittaa tästä. [TEHTY]
+- Onnistuneen kirjautumisen jälkeen käyttäjä näkee päivät, joihin saliohjelman eri liikeet on allokoitu [TEHTY]
 - Käyttäjä voi luoda, poistaa ja muokata päiviä
-- Saliohjelma ja päivät näkyvät vain kirjautuneelle käyttäjälle
-- Tässä näkymässä voi myös kirjautua ulos
-- Tiettyä päivää klikkaamalla käyttäjä näkee kyseiseen päivään kuuluvat liikkeet, niiden toistokerrat ja käytetyt painot
+- Saliohjelma ja päivät näkyvät vain kirjautuneelle käyttäjälle [TEHTY]
+- Tässä näkymässä voi myös kirjautua ulos [OSITTAIN TEHTY]
+- Tiettyä päivää klikkaamalla käyttäjä näkee kyseiseen päivään kuuluvat liikkeet, niiden toistokerrat ja käytetyt painot [TEHTY]
 - Käyttäjä voi muokata, poistaa tai päivittää tehtäviä liikkeitä, niiden toistokertoja ja käytettyjä painoja
 - Tästä näkymästä käyttäjä voi myös palata etusivulle
 
