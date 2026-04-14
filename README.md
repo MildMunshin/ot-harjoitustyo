@@ -37,6 +37,10 @@ Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehitykses
   ```bash
   poetry run invoke coverage-report
   ```
+- Suorita pylint:
+  ```bash
+  poetry run invoke lint
+  ```
 
 ## Dokumentaatio
 
