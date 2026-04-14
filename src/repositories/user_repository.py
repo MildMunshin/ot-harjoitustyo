@@ -1,6 +1,6 @@
-import sqlite3
 from src.entities.user import User
 from src.database_connection import get_database_connection
+
 
 class UserRepository:
     def __init__(self, connection):
@@ -14,7 +14,7 @@ class UserRepository:
         rows = cursor.fetchall()
 
         return [User(row["username"], row["password"]) for row in rows]
-    
+
     def create(self, user: User):
         cursor = self._connection.cursor()
 
@@ -25,7 +25,7 @@ class UserRepository:
 
         self._connection.commit()
         return user
-    
+
     def find_by_username(self, username):
         cursor = self._connection.cursor()
 
@@ -37,7 +37,7 @@ class UserRepository:
 
         if row:
             return User(row["username"], row["password"])
-        
+
         return None
 
 

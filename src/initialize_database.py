@@ -8,6 +8,14 @@ def drop_tables(connection):
         drop table if exists users;
     ''')
 
+    cursor.execute('''
+        drop table if exists days;
+    ''')
+
+    cursor.execute('''
+        drop table if exists exercises;
+    ''')
+
     connection.commit()
 
 
@@ -18,6 +26,27 @@ def create_tables(connection):
         create table users (
             username text primary key,
             password text
+        );
+    ''')
+
+    cursor.execute('''
+        create table days (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT,
+            day_name TEXT NOT NULL,
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+
+    cursor.execute('''
+        create table exercises (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            day_id INTEGER,
+            name TEXT,
+            sets INTEGER,
+            reps INTEGER,
+            weight REAL 
+            
         );
     ''')
 
