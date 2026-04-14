@@ -38,4 +38,7 @@ classDiagram
         class User
         class Exercise
     }
+
+    class UI
+    UI -- User
 ```
