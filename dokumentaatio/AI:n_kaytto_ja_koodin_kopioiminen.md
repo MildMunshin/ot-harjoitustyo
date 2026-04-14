@@ -6,3 +6,7 @@ Ajan puutteen vuoksi päädyin turvautumaan tekoälyyn ui.py-tiedostoa tehdessä
 Esimerkkisovellukesta otin mallia UsernameExistsError- ja InvalidCredentialsError-luokista ja käytin samannimisiä ja -tyyppisiä ratkaisuja omassa user_service.py-tiedostossa.
 
 Aikapaineen alla tapahtuneen koodaamisen takia tämän viikon raportointi tekoälyn ja lainaamisen suhteen on hieman suuripiirteinen, ja pyrin jatkossa raportoimaan asiasta tarkemmin.
+
+### Viikko 4
+
+Kopioitu koodi ja tekoälyn käyttö on merkitty suoraan koodiin. Kopioitua koodia löytyy index.py-tiedostosta. Tekoälyä on käytetty seuraavissa tiedostoissa: day_service.py, exercise_service.py, day_view.py, exercises_view.py, exercise_element.py
