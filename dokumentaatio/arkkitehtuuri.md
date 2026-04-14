@@ -20,3 +20,22 @@
           weight
       }
 ```
+
+```mermaid
+classDiagram
+    namespace Services {
+        class DayService
+        class UserService
+        class ExerciseService
+    }
+    namespace Repositories {
+        class DayRepository
+        class UserRepository
+        class ExerciseRepository
+    }
+    namespace Entities {
+        class Day
+        class User
+        class Exercise
+    }
+```
