@@ -46,7 +46,6 @@ def create_tables(connection):
             sets INTEGER,
             reps INTEGER,
             weight REAL 
-            
         );
     ''')
 
