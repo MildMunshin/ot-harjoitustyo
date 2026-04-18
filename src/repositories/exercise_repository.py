@@ -28,4 +28,14 @@ class ExerciseRepository:
 
         return [Exercise(row["id"], row["day_id"], row["name"], row["sets"], row["reps"], row["weight"]) for row in rows]
 
+    def delete(self, exercise_id):
+        cursor = self._connection.cursor()
+
+        cursor.execute(
+            "DELETE FROM exercises WHERE id = ?",
+            (exercise_id,)
+        )
+
+        self._connection.commit()
+
 exercise_repository = ExerciseRepository(get_database_connection())

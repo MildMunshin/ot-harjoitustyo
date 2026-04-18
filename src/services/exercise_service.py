@@ -18,5 +18,7 @@ class ExerciseService:
         return self._exercise_repository.find_by_day(day_id)
     # Ai code ends
 
+    def delete_exercise(self, exercise_id):
+        self._exercise_repository.delete(exercise_id)
 
 exercise_service = ExerciseService()

@@ -27,5 +27,14 @@ class DayRepository:
         rows = cursor.fetchall()
         return [Day(row["id"], row["username"], row["day_name"]) for row in rows]
 
+    def delete_day(self, day):
+        cursor = self._connection.cursor()
+
+        cursor.execute(
+            "DELETE FROM days WHERE id = ?",
+            (day.id,)
+        )
+
+        self._connection.commit()
 
 day_repository = DayRepository(get_database_connection())

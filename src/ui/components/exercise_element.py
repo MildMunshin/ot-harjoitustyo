@@ -4,10 +4,11 @@ from tkinter import Tk, ttk, constants
 
 
 class ExerciseElement(ttk.Frame):
-    def __init__(self, parent, current_day, save_callback, exercise=None):
+    def __init__(self, parent, current_day, save_callback, delete_callback=None, exercise=None):
         super().__init__(parent)
 
         self._save_callback = save_callback
+        self._delete_callback = delete_callback
         self._current_day = current_day
 
         self._name_entry = ttk.Entry(self)
@@ -28,8 +29,11 @@ class ExerciseElement(ttk.Frame):
             self._reps_entry.insert(0, exercise.reps)
             self._weight_entry.insert(0, exercise.weight)
 
-            ttk.Button(self, text="Delete (not working yet)",
-                       command=self._handle_delete).grid(row=0, column=4, padx=5)
+            ttk.Button(self, text="Delete exercise",
+                # AI code starts here
+                command=lambda: self._handle_delete(exercise.id)
+                # AI code ends here
+                ).grid(row=0, column=4, padx=5)
 
         else:
             self._name_entry.insert(0, "exercise name")
@@ -57,6 +61,5 @@ class ExerciseElement(ttk.Frame):
 
     # Code created by AI ends here
 
-    # Delete functionalities not ready yet
-    def _handle_delete(self):
-        pass
+    def _handle_delete(self, exercise_id):
+        self._delete_callback(exercise_id)

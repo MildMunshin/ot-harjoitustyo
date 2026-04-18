@@ -45,7 +45,10 @@ def create_tables(connection):
             name TEXT,
             sets INTEGER,
             reps INTEGER,
-            weight REAL 
+            weight REAL,
+            FOREIGN KEY (day_id)
+                REFERENCES days(id)
+                ON DELETE CASCADE
         );
     ''')
 

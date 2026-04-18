@@ -46,6 +46,10 @@ class ExercisesView:
             day_id, name, sets, reps, weight)
         self._refresh()
 
+    def _handle_delete(self, exercise_id):
+        self._exercise_service.delete_exercise(exercise_id)
+        self._refresh()
+
     def _refresh(self):
         for child in self._exercises_container.winfo_children():
             child.destroy()
@@ -68,13 +72,27 @@ class ExercisesView:
                 self._exercises_container,
                 self._current_day,
                 save_callback=self._handle_save,
+                delete_callback=self._handle_delete,
                 exercise=ex
             )
             element.grid(row=row, column=0, columnspan=5, sticky="ew", pady=2)
 
+            # ttk.Button(
+            #     self._exercises_container,
+            #     text="Delete exercise",
+            #     command=lambda e=ex: self._delete_exercise(e)
+            # ).pack()
+
         for i in range(5):
             self._exercises_container.columnconfigure(i, weight=1)
-    # AI code ends
+            # AI code ends
+
+
+
+    # def _delete_exercise(self, exercise):
+    #     exercise_service.delete_day(exercise)
+
+    #     self._refresh()
 
     def pack(self):
         self._frame.pack(fill=constants.X)

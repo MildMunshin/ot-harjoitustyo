@@ -13,5 +13,7 @@ class DayService:
     def get_days_by_user(self, username):
         return self._day_repository.find_by_username(username)
 
+    def delete_day(self, day):
+        self._day_repository.delete_day(day)
 
 day_service = DayService()

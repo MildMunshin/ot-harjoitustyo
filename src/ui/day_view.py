@@ -52,14 +52,32 @@ class DayView:
                 command=lambda d=day: self._open_day(d)
             ).pack(fill="x", pady=2)
             # AI code ends
+            
+            ttk.Button(
+                self._day_container,
+                text="Delete day",
+                command=lambda d=day: self._delete_day(d)
+            ).pack()
+
 
     def _open_day(self, day):
         self._show_exercises_view(day)
         print(
             f"Opening day: {day.day_name}, id={day.id}, username={day.username}")
+        
+    def _delete_day(self, day):
+        day_service.delete_day(day)
+
+        self._refresh()
 
     def pack(self):
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
         self._frame.destroy()
+
+    def _refresh(self):
+        for child in self._day_container.winfo_children():
+            child.destroy()
+
+        self._render_days()
