@@ -65,9 +65,9 @@ class UI:
         except InvalidCredentialsError:
             print("Invalid username or password")
 
-    def _handle_create_user(self, username, password):
+    def _handle_create_user(self, username, password, password2):
         try:
-            user_service.create_user(username, password)
+            user_service.create_user(username, password, password2)
             print("User created")
             self._show_login_view()
         except UsernameExistsError:

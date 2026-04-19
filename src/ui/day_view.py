@@ -59,7 +59,6 @@ class DayView:
                 command=lambda d=day: self._delete_day(d)
             ).pack()
 
-
     def _open_day(self, day):
         self._show_exercises_view(day)
         print(
