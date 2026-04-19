@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk, constants
+from tkinter import Tk, ttk, constants, messagebox
 from src.services.user_service import user_service, UsernameExistsError, InvalidCredentialsError
 from src.services.exercise_service import exercise_service
 from src.ui.components.exercise_element import ExerciseElement
@@ -47,8 +47,12 @@ class ExercisesView:
         self._refresh()
 
     def _handle_delete(self, exercise_id):
-        self._exercise_service.delete_exercise(exercise_id)
-        self._refresh()
+        response = messagebox.askyesno("Confirmation", "Do you really want to delete the exercise?")
+        if response:
+            self._exercise_service.delete_exercise(exercise_id)
+            self._refresh()
+        else:
+            self._refresh()
 
     def _refresh(self):
         for child in self._exercises_container.winfo_children():
@@ -77,22 +81,9 @@ class ExercisesView:
             )
             element.grid(row=row, column=0, columnspan=5, sticky="ew", pady=2)
 
-            # ttk.Button(
-            #     self._exercises_container,
-            #     text="Delete exercise",
-            #     command=lambda e=ex: self._delete_exercise(e)
-            # ).pack()
-
         for i in range(5):
             self._exercises_container.columnconfigure(i, weight=1)
             # AI code ends
-
-
-
-    # def _delete_exercise(self, exercise):
-    #     exercise_service.delete_day(exercise)
-
-    #     self._refresh()
 
     def pack(self):
         self._frame.pack(fill=constants.X)

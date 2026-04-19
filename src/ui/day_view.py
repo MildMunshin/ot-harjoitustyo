@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, messagebox
 from src.services.day_service import day_service
 
 
@@ -66,9 +66,12 @@ class DayView:
             f"Opening day: {day.day_name}, id={day.id}, username={day.username}")
         
     def _delete_day(self, day):
-        day_service.delete_day(day)
-
-        self._refresh()
+        response = messagebox.askyesno("Confirmation", f'Do you really want to delete "{day.day_name}"?')
+        if response:
+            day_service.delete_day(day)
+            self._refresh()
+        else:
+            self._refresh()
 
     def pack(self):
         self._frame.pack(fill=constants.X)
