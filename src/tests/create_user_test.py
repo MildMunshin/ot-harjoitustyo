@@ -13,7 +13,8 @@ class TestCreateUser(unittest.TestCase):
         self.service = UserService()
 
     def test_create_user(self):
-        self.service.create_user("Test-Matthew", "testpassword123")
+        self.service.create_user(
+            "Test-Matthew", "testpassword123", "testpassword123")
         testuser = self.service._user_repository.find_by_username(
             "Test-Matthew")
         print(f"Username: {testuser.username}, Password: {testuser.password}")

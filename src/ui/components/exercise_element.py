@@ -30,10 +30,10 @@ class ExerciseElement(ttk.Frame):
             self._weight_entry.insert(0, exercise.weight)
 
             ttk.Button(self, text="Delete exercise",
-                # AI code starts here
-                command=lambda: self._handle_delete(exercise.id)
-                # AI code ends here
-                ).grid(row=0, column=4, padx=5)
+                       # AI code starts here
+                       command=lambda: self._handle_delete(exercise.id)
+                       # AI code ends here
+                       ).grid(row=0, column=4, padx=5)
 
         else:
             self._name_entry.insert(0, "exercise name")

@@ -37,4 +37,5 @@ class DayRepository:
 
         self._connection.commit()
 
+
 day_repository = DayRepository(get_database_connection())

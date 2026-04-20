@@ -21,7 +21,8 @@ class TestCreateDay(unittest.TestCase):
         self.day_service = DayService()
 
     def test_create_day(self):
-        self.user_service.create_user("Test-Matthew", "testpassword123")
+        self.user_service.create_user(
+            "Test-Matthew", "testpassword123", "testpassword123")
         self.day_service.create_day("Test-Matthew", "Day 1")
         testday = self.day_service.get_days_by_user("Test-Matthew")
         print(

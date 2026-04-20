@@ -47,7 +47,8 @@ class ExercisesView:
         self._refresh()
 
     def _handle_delete(self, exercise_id):
-        response = messagebox.askyesno("Confirmation", "Do you really want to delete the exercise?")
+        response = messagebox.askyesno(
+            "Confirmation", "Do you really want to delete the exercise?")
         if response:
             self._exercise_service.delete_exercise(exercise_id)
             self._refresh()

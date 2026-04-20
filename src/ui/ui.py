@@ -5,6 +5,7 @@ from src.ui.user_view import UserView
 from src.ui.day_view import DayView
 from src.ui.exercises_view import ExercisesView
 
+
 class UI:
     def __init__(self, root):
         self._root = root

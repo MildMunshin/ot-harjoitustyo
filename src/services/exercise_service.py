@@ -21,4 +21,5 @@ class ExerciseService:
     def delete_exercise(self, exercise_id):
         self._exercise_repository.delete(exercise_id)
 
+
 exercise_service = ExerciseService()

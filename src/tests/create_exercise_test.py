@@ -25,7 +25,8 @@ class TestCreateExercise(unittest.TestCase):
         self.exercise_service = ExerciseService()
 
     def test_create_exercise(self):
-        self.user_service.create_user("Test-Matthew", "testpassword123")
+        self.user_service.create_user(
+            "Test-Matthew", "testpassword123", "testpassword123")
         self.day_service.create_day("Test-Matthew", "Day 1")
 
         testday = self.day_service.get_days_by_user("Test-Matthew")

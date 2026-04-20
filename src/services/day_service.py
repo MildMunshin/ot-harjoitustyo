@@ -16,4 +16,5 @@ class DayService:
     def delete_day(self, day):
         self._day_repository.delete_day(day)
 
+
 day_service = DayService()

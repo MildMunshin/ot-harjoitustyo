@@ -1,20 +1,26 @@
 from src.repositories.user_repository import user_repository as default_user_repository
 from src.entities.user import User
 
+
 class InvalidCredentialsError(Exception):
     pass
+
 
 class UsernameExistsError(Exception):
     pass
 
+
 class UsernameTooShortError(Exception):
     pass
+
 
 class PasswordTooShortError(Exception):
     pass
 
+
 class PasswordsDoNotMatch(Exception):
     pass
+
 
 class UserService:
     def __init__(self, user_repository=default_user_repository):
@@ -26,7 +32,7 @@ class UserService:
         if len(username) < 5:
             print("username is too short")
             raise UsernameTooShortError
-        
+
         if password != password2:
             print("passwords don't match")
             raise PasswordsDoNotMatch
@@ -40,7 +46,7 @@ class UserService:
         if existing:
             print("username already exists")
             raise UsernameExistsError
-        
+
         user = self._user_repository.create(User(username, password))
         if login:
             self._user = user

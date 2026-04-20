@@ -52,7 +52,7 @@ class DayView:
                 command=lambda d=day: self._open_day(d)
             ).pack(fill="x", pady=2)
             # AI code ends
-            
+
             ttk.Button(
                 self._day_container,
                 text="Delete day",
@@ -63,9 +63,10 @@ class DayView:
         self._show_exercises_view(day)
         print(
             f"Opening day: {day.day_name}, id={day.id}, username={day.username}")
-        
+
     def _delete_day(self, day):
-        response = messagebox.askyesno("Confirmation", f'Do you really want to delete "{day.day_name}"?')
+        response = messagebox.askyesno(
+            "Confirmation", f'Do you really want to delete "{day.day_name}"?')
         if response:
             day_service.delete_day(day)
             self._refresh()

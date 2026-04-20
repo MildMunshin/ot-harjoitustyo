@@ -1,6 +1,7 @@
 from src.entities.exercise import Exercise
 from src.database_connection import get_database_connection
 
+
 class ExerciseRepository:
     def __init__(self, connection):
         self._connection = connection
@@ -37,5 +38,6 @@ class ExerciseRepository:
         )
 
         self._connection.commit()
+
 
 exercise_repository = ExerciseRepository(get_database_connection())
