@@ -68,6 +68,8 @@ sequenceDiagram
     participant Database
     participant DayView
 
-    User-->UI
-
+    User->>LoginView: Insert username + password
+    User->>LoginView: Click "Login"
+    LoginView->>UI: _handle_login_click
+    UI->>UserService: _handle_login
 ```
