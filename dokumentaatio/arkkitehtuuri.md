@@ -68,8 +68,6 @@ sequenceDiagram
     participant Database
     participant DayView
 
-    User->>LoginView: Syöttää username + password
-    User->>LoginView: Klikkaa "Login"
-    LoginView->>UI: _handle_login(username, password)
+    User-->UI
 
 ```
