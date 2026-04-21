@@ -68,7 +68,9 @@ sequenceDiagram
     participant Database
     participant DayView
 
-    User->>LoginView: Insert username & password
-    User->>LoginView: Click "Login"
+    User->>UI
+    UI->>LoginView
+    LoginView-->UI: Insert username & password
+    LoginView-->UI: Click "Login"
 
 ```
