@@ -56,8 +56,9 @@ UserRepository ..> User
 ExerciseRepository ..> Exercise
 
 ```
-## Käyttäjän sisäänkirjautuminen
 
+## Käyttäjän sisäänkirjautuminen
+```mermaid
 sequenceDiagram
     actor User
     participant LoginView
@@ -66,3 +67,5 @@ sequenceDiagram
     participant UserRepository
     participant Database
     participant DayView
+
+```
