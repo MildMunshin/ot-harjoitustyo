@@ -76,4 +76,7 @@ sequenceDiagram
     UserRepository->>Database: SELECT * FROM users WHERE username = ?
     Database-->>UserRepository: user row
     UserRepository-->>UserService: User
+    UserService-->>UI: user
+    UI->>DayView: _show_day_view()
+    DayView-->>User: Shows day view
 ```
