@@ -74,4 +74,6 @@ sequenceDiagram
     UI->>UserService: login(username, password)
     UserService->>UserRepository: find_by_username(username)
     UserRepository->>Database: SELECT * FROM users WHERE username = ?
+    Database-->>UserRepository: user row
+    UserRepository-->>UserService: User
 ```
