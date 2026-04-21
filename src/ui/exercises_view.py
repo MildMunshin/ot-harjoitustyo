@@ -46,6 +46,8 @@ class ExercisesView:
             day_id, name, sets, reps, weight)
         self._refresh()
 
+    # AI code ends
+
     def _handle_delete(self, exercise_id):
         response = messagebox.askyesno(
             "Confirmation", "Do you really want to delete the exercise?")
@@ -54,6 +56,8 @@ class ExercisesView:
             self._refresh()
         else:
             self._refresh()
+
+    # AI code begins
 
     def _refresh(self):
         for child in self._exercises_container.winfo_children():
