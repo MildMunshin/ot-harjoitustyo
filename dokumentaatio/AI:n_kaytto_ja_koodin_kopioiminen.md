@@ -10,3 +10,7 @@ Aikapaineen alla tapahtuneen koodaamisen takia tämän viikon raportointi tekoä
 ### Viikko 4
 
 Kopioitu koodi ja tekoälyn käyttö on merkitty suoraan koodiin. Kopioitua koodia löytyy index.py-tiedostosta. Tekoälyä on käytetty seuraavissa tiedostoissa: day_service.py, exercise_service.py, day_view.py, exercises_view.py, exercise_element.py
+
+### Viikko 5
+
+Ei merkittävää tekoälyn käyttöä tai koodin kopioimista. Lyhyet tekoälyn tuottamat koodinpätkät merkitty suoraan koodiin.
