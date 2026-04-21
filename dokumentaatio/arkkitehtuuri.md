@@ -70,6 +70,8 @@ sequenceDiagram
 
     User->>LoginView: Insert username + password
     User->>LoginView: Click "Login"
-    LoginView->>UI: _handle_login_click
-    UI->>UserService: _handle_login
+    LoginView->>UI: _handle_login(username, password)
+    UI->>UserService: login(username, password)
+    UserService->>UserRepository: find_by_username(username)
+    UserRepository->>Database: SELECT * FROM users WHERE username = ?
 ```
