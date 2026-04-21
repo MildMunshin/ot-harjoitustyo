@@ -56,3 +56,13 @@ UserRepository ..> User
 ExerciseRepository ..> Exercise
 
 ```
+## Käyttäjän sisäänkirjautuminen
+
+sequenceDiagram
+    actor User
+    participant LoginView
+    participant UI
+    participant UserService
+    participant UserRepository
+    participant Database
+    participant DayView
