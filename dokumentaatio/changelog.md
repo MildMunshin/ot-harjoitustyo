@@ -11,7 +11,7 @@
 
 ### Viikko 5
 
-- Käyttäjä voi poistaa päiväohjelmia tai niiden sisältämiä harjoituksia.
+- Käyttäjä voi poistaa päiväohjelmia tai niiden sisältämiä harjoituksia. Sovellus kysyy varmistuksen poistamiselle.
 - Uuden käyttäjän luominen vaatii salasanan uudelleen kirjoittamista.
 - Käyttäjätunnus ja salasana tulee olla vähintään 5 merkkiä pitkä.
 - Päiväohjelman poistaminen poistaa kaikki sen sisältämät harjoitukset tietokannasta.
