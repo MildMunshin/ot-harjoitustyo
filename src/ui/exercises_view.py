@@ -57,6 +57,11 @@ class ExercisesView:
         else:
             self._refresh()
 
+    def _handle_update(self, exercise_id, day_id, name, sets, reps, weight):
+        self._exercise_service.update_exercise(
+            exercise_id, day_id, name, sets, reps, weight)
+        self._refresh()
+
     # AI code begins
 
     def _refresh(self):
@@ -82,11 +87,13 @@ class ExercisesView:
                 self._current_day,
                 save_callback=self._handle_save,
                 delete_callback=self._handle_delete,
+                update_callback=self._handle_update,
                 exercise=ex
             )
-            element.grid(row=row, column=0, columnspan=5, sticky="ew", pady=2)
 
-        for i in range(5):
+            element.grid(row=row, column=0, columnspan=6, sticky="ew", pady=2)
+
+        for i in range(6):
             self._exercises_container.columnconfigure(i, weight=1)
             # AI code ends
 

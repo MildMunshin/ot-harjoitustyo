@@ -21,5 +21,11 @@ class ExerciseService:
     def delete_exercise(self, exercise_id):
         self._exercise_repository.delete(exercise_id)
 
+    def update_exercise(self, exercise_id, day_id, name, sets, reps, weight):
+        exercise = self._exercise_repository.update(
+            Exercise(exercise_id, day_id, name, sets, reps, weight)
+        )
+        return exercise
+
 
 exercise_service = ExerciseService()

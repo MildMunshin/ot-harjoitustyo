@@ -39,5 +39,18 @@ class ExerciseRepository:
 
         self._connection.commit()
 
+    # AI code starts here
+    def update(self, exercise):
+        self._connection.execute(
+            """
+            UPDATE exercises
+            SET day_id = ?, name = ?, sets = ?, reps = ?, weight = ?
+            WHERE id = ?
+            """,
+            (exercise.day_id, exercise.name, exercise.sets, exercise.reps, exercise.weight, exercise.id)
+        )
+        self._connection.commit()
+        return exercise
+    # AI code ends here
 
 exercise_repository = ExerciseRepository(get_database_connection())
