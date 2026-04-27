@@ -4,30 +4,63 @@ from src.entities.user import User
 
 class InvalidCredentialsError(Exception):
     pass
+    """Luokka, joka ilmoittaa väärästä käyttäjänimestä tai salasanasta.
+    """
 
 
 class UsernameExistsError(Exception):
     pass
+    """Luokka, joka ilmoittaa olemassa olevasta käyttäjänimestä.
+    """
 
 
 class UsernameTooShortError(Exception):
     pass
-
+    """Luokka, joka ilmoittaa liian lyhyestä käyttäjänimestä.
+    """
 
 class PasswordTooShortError(Exception):
     pass
-
+    """Luokka, joka ilmoittaa liian lyhyestä salasanasta.
+    """
 
 class PasswordsDoNotMatch(Exception):
     pass
+    """Luokka, joka ilmoittaa jos salasanat eivät täsmää käyttäjän luomisen yhteydessä.
+    """
 
 
 class UserService:
+    """Käyttäjien käsittelyyn liittyvästä sovelluslogiikasta vastaava luokka.
+    """
+
     def __init__(self, user_repository=default_user_repository):
         self._user_repository = user_repository
-        self._user = None
+        # self._user = None
+        """Luokan konstruktori, joka luo harjoitteisiin liittyvästä sovelluslogiikasta vastaavan palvelun.
+
+        Args:
+            user_repository: Olio, jolla on UserRepository-luokkaa vastaavat metodit.
+        """        
 
     def create_user(self, username, password, password2, login=True):
+        """Luo uuden käyttäjän.
+
+        Args:
+            username: Merkkijono, joka kuvaa käyttäjän nimimerkkiä
+            password: Merkkijono, joka kuvaa käyttäjän salasanaa
+            password2: Merkkijono, joka varmistaa, että käyttäjä on syöttänyt salasanan oikein.
+            login: Boolean-arvo, joka kertoo kirjataanko käyttäjä sisään onnistuneen luonnin jälkeen.
+
+        Raises:
+            UsernameTooShortError: Virhe, joka ilmoittaa liian lyhyestä käyttäjänimestä.
+            PasswordsDoNotMatch: Virhe, joka ilmoittaa jos salasanat eivät täsmää käyttäjän luomisen yhteydessä.
+            PasswordTooShortError: Virhe, joka ilmoittaa liian lyhyestä käyttäjänimestä.
+            UsernameExistsError: Virhe, joka ilmoittaa olemassa olevasta käyttäjänimestä.
+
+        Returns:
+            Palauttaa luodun käyttäjän.
+        """        
 
         if len(username) < 5:
             print("username is too short")
@@ -54,6 +87,16 @@ class UserService:
         return user
 
     def login(self, username, password):
+        """Kirjaa käyttäjän sisään.
+
+        Args:
+            username: Merkkijono, joka kuvaa käyttäjän käyttäjänimeä.
+            password: Merkkijono, joka kuvaa käyttäjän salasanaa.
+
+        Returns:
+            Palauttaa User-olion.
+        """
+        
         user = self._user_repository.find_by_username(username)
 
         if not user or user.password != password:
@@ -61,6 +104,5 @@ class UserService:
 
         self._user = user
         return user
-
 
 user_service = UserService()

@@ -14,3 +14,7 @@ Kopioitu koodi ja tekoälyn käyttö on merkitty suoraan koodiin. Kopioitua kood
 ### Viikko 5
 
 Ei merkittävää tekoälyn käyttöä tai koodin kopioimista. Lyhyet tekoälyn tuottamat koodinpätkät merkitty suoraan koodiin.
+
+### Viikko 6
+
+Docstring-dokumentaatiossa on otettu laajalti mallia esimerkkisovelluksesta.

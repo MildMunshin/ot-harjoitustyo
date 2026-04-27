@@ -3,10 +3,27 @@ from src.database_connection import get_database_connection
 
 
 class DayRepository:
+    """Päiviin liittyvistä tietokantaoperaatioista vastaava luokka.
+    """    
+
     def __init__(self, connection):
+        """Luokan konstruktori.
+
+        Args:
+            connection: Tietokantayhteyden Connection-olio
+        """        
+        
         self._connection = connection
 
     def create(self, day: Day):
+        """Luo uuden päivän.
+
+        Args:
+            day: tallennettava Day-olio.
+
+        Returns:
+            Palauttaa Day-olion.
+        """        
         cursor = self._connection.cursor()
 
         cursor.execute(
@@ -18,6 +35,14 @@ class DayRepository:
         return day
 
     def find_by_username(self, username):
+        """Palauttaa käyttäjän päivät.
+
+        Args:
+            username: Merkkijono, joka kuvaa käyttäjän käyttäjänimeä.
+
+        Returns:
+            Palauttaa käyttäjän luomat päivät.
+        """
         cursor = self._connection.cursor()
 
         cursor.execute(
@@ -28,6 +53,11 @@ class DayRepository:
         return [Day(row["id"], row["username"], row["day_name"]) for row in rows]
 
     def delete_day(self, day):
+        """Poistaa valitun päivän.
+
+        Args:
+            day: poistettava Day-olio.
+        """
         cursor = self._connection.cursor()
 
         cursor.execute(
