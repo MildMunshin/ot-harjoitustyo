@@ -12,7 +12,7 @@ Käyttöliittymä sisältää neljä erilaista näkymää:
 
 Jokaisella näkymällä on oma luokka, joka vastaa sen esillepanosta. Kirjautumisen jälkeen avautuva päivänäkymä näyttää käyttäjän luomat päivät. Haluttua päivää klikkaamalla avautuu näkymä, joka näytää päivän sisältämät harjoitteet. Tämä näkymä hyödyntää ExerciseElement-luokkaa, joka vastaa luodun harjoitteen esittämisestä mielekäällä tavalla, ja joka sisältää tiedot harjoitteen nimestä, sarjoista, toistoista ja käytettävästä painosta.
 
-Käyttäjä voi luoda uusia päiviä päivänäkymässä. Valitun päivän sisältämässä, joka näyttää päivän sisältämät harjoitteet, käyttäjä voi luoda uusia harjoitteita, poistaa ja päivittää niiden arvoja.
+Käyttäjä voi luoda uusia päiviä päivänäkymässä. Valitun päivän näkymässä, joka näyttää päivän sisältämät harjoitteet, käyttäjä voi luoda uusia harjoitteita, poistaa ja päivittää niiden arvoja.
 
 Käyttöliittymä on eriytetty sovelluslogiikasta ja toteuttaa toiminnallisuuksia kutsumalla eri Services-kansion sisältämiä metodeja.
 
