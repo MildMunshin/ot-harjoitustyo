@@ -15,3 +15,7 @@
 - Uuden käyttäjän luominen vaatii salasanan uudelleen kirjoittamista.
 - Käyttäjätunnus ja salasana tulee olla vähintään 5 merkkiä pitkä.
 - Päiväohjelman poistaminen poistaa kaikki sen sisältämät harjoitukset tietokannasta.
+
+### Viikko 6
+
+- Käyttäjä voi muokata harjoitteita. Tähän kuuluvat harjoitteen nimi, sarjat, toistokerrat sekä käytetty paino.

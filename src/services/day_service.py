@@ -12,7 +12,7 @@ class DayService:
 
         Args:
             day_repository: Olio, jolla on DayRepository-luokkaa vastaavat metodit.
-        """        
+        """
 
     def create_day(self, username, day_name):
         self._day_repository.create(Day(None, username, day_name))
@@ -31,10 +31,9 @@ class DayService:
             username: Merkkijono, joka kuvaa käyttän käyttäjänimeä.
         Returns:
             Palauttaa kaikki käyttäjän luomat päivät.
-        """  
-        
-        return self._day_repository.find_by_username(username)
+        """
 
+        return self._day_repository.find_by_username(username)
 
     def delete_day(self, day):
         self._day_repository.delete_day(day)
@@ -42,7 +41,7 @@ class DayService:
 
         Args:
             day: Päivä-olio, jonka käyttäjä on valinnut poistettavaksi. 
-        """        
+        """
 
 
 day_service = DayService()

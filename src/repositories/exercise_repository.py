@@ -5,12 +5,13 @@ from src.database_connection import get_database_connection
 class ExerciseRepository:
     """Harjoitteisiin liittyvistä tietokantaoperaatioista vastaava luokka.
     """
+
     def __init__(self, connection):
         """Luokan konstruktori.
 
         Args:
             connection: Tietokantayhteyden Connection-olio
-        """   
+        """
 
         self._connection = connection
 
@@ -80,17 +81,19 @@ class ExerciseRepository:
         Returns:
             Palauttaa päivitetyn Exercise-olion.
         """
-        
+
         self._connection.execute(
             """
             UPDATE exercises
             SET day_id = ?, name = ?, sets = ?, reps = ?, weight = ?
             WHERE id = ?
             """,
-            (exercise.day_id, exercise.name, exercise.sets, exercise.reps, exercise.weight, exercise.id)
+            (exercise.day_id, exercise.name, exercise.sets,
+             exercise.reps, exercise.weight, exercise.id)
         )
         self._connection.commit()
         return exercise
     # AI code ends here
+
 
 exercise_repository = ExerciseRepository(get_database_connection())

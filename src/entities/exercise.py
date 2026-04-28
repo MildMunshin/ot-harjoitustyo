@@ -8,7 +8,7 @@ class Exercise:
         sets = Kokonaisluku, joka kuvaa sarjojen määrää.
         reps = Kokonaisluku, joka kuvaa toistojen määrää.
         weight = Liukuluku, joka kuvaa käytettävää painoa.
-    """    
+    """
 
     def __init__(self, exercise_id, day_id, name, sets, reps, weight):
         self.id = exercise_id
@@ -27,5 +27,4 @@ class Exercise:
         sets = Kokonaisluku, joka kuvaa sarjojen määrää.
         reps = Kokonaisluku, joka kuvaa toistojen määrää.
         weight = Liukuluku, joka kuvaa käytettävää painoa.
-    """    
- 
+    """

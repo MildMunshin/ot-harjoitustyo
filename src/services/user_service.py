@@ -19,10 +19,12 @@ class UsernameTooShortError(Exception):
     """Luokka, joka ilmoittaa liian lyhyestä käyttäjänimestä.
     """
 
+
 class PasswordTooShortError(Exception):
     pass
     """Luokka, joka ilmoittaa liian lyhyestä salasanasta.
     """
+
 
 class PasswordsDoNotMatch(Exception):
     pass
@@ -41,7 +43,7 @@ class UserService:
 
         Args:
             user_repository: Olio, jolla on UserRepository-luokkaa vastaavat metodit.
-        """        
+        """
 
     def create_user(self, username, password, password2, login=True):
         """Luo uuden käyttäjän.
@@ -60,7 +62,7 @@ class UserService:
 
         Returns:
             Palauttaa luodun käyttäjän.
-        """        
+        """
 
         if len(username) < 5:
             print("username is too short")
@@ -96,7 +98,7 @@ class UserService:
         Returns:
             Palauttaa User-olion.
         """
-        
+
         user = self._user_repository.find_by_username(username)
 
         if not user or user.password != password:
@@ -104,5 +106,6 @@ class UserService:
 
         self._user = user
         return user
+
 
 user_service = UserService()

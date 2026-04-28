@@ -13,7 +13,7 @@ Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauks
 - Saliohjelma ja päivät näkyvät vain kirjautuneelle käyttäjälle [TEHTY]
 - Tässä näkymässä voi myös kirjautua ulos [OSITTAIN TEHTY]
 - Tiettyä päivää klikkaamalla käyttäjä näkee kyseiseen päivään kuuluvat liikkeet, niiden toistokerrat ja käytetyt painot [TEHTY]
-- Käyttäjä voi muokata, poistaa tai päivittää tehtäviä liikkeitä, niiden toistokertoja ja käytettyjä painoja [OSITTAIN TEHTY]
+- Käyttäjä voi muokata, poistaa tai päivittää tehtäviä liikkeitä, niiden toistokertoja ja käytettyjä painoja [TEHTY]
 - Tästä näkymästä käyttäjä voi myös palata etusivulle
 
 ## Jatkokehitysideoita

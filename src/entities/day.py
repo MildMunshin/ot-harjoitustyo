@@ -6,7 +6,7 @@ class Day:
         id: Kokonaislukuarvo, joka kuvaa päivän unniikia id-tunnusta.
         username: Merkkijono, joka kuvaa kelle käyttäjälle päivä kuuluu.
         day_name: Merkkijono, joka muodostaa päivän nimen.
-    """    
+    """
 
     def __init__(self, day_id, username, day_name):
         self.id = day_id
@@ -19,4 +19,4 @@ class Day:
             id: Kokonaislukuarvo, joka kuvaa päivän unniikia id-tunnusta.
             username: Merkkijono, joka kuvaa kelle käyttäjälle päivä kuuluu.
             day_name: Merkkijono, joka muodostaa päivän nimen.
-        """    
+        """

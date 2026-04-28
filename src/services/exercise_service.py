@@ -13,9 +13,8 @@ class ExerciseService:
 
         Args:
             exercise_repository: Olio, jolla on ExerciseRepository-luokkaa vastaavat metodit.
-        """        
+        """
 
-    
     # Ai code begins
     def create_exercise(self, day_id, name, sets, reps, weight):
         """Luo uuden harjoitteen.
@@ -42,11 +41,10 @@ class ExerciseService:
             day_id: Kokonaisluku, joka kuvaa päivän uniikkia id-tunnusta.
         Returns:
             Palauttaa kaikki päivän sisältämät harjoitteet.
-        """    
+        """
 
         return self._exercise_repository.find_by_day(day_id)
     # Ai code ends
-
 
     def delete_exercise(self, exercise_id):
         self._exercise_repository.delete(exercise_id)
@@ -54,7 +52,7 @@ class ExerciseService:
 
         Args:
             exercise_id: Kokonaisluku, joka kuvaa harjoitteen uniikkia id-tunnusta.
-        """        
+        """
 
     def update_exercise(self, exercise_id, day_id, name, sets, reps, weight):
         """Päivittää valitun harjoitteen arvoja.
@@ -69,11 +67,12 @@ class ExerciseService:
 
         Returns:
             Palauttaa päivitetyn harjoite-olion.
-        """    
+        """
 
         exercise = self._exercise_repository.update(
             Exercise(exercise_id, day_id, name, sets, reps, weight)
         )
         return exercise
+
 
 exercise_service = ExerciseService()

@@ -4,15 +4,15 @@ from src.database_connection import get_database_connection
 
 class DayRepository:
     """Päiviin liittyvistä tietokantaoperaatioista vastaava luokka.
-    """    
+    """
 
     def __init__(self, connection):
         """Luokan konstruktori.
 
         Args:
             connection: Tietokantayhteyden Connection-olio
-        """        
-        
+        """
+
         self._connection = connection
 
     def create(self, day: Day):
@@ -23,7 +23,7 @@ class DayRepository:
 
         Returns:
             Palauttaa Day-olion.
-        """        
+        """
         cursor = self._connection.cursor()
 
         cursor.execute(

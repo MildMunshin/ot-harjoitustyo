@@ -31,7 +31,7 @@ class ExerciseElement(ttk.Frame):
             self._weight_entry.insert(0, exercise.weight)
 
             ttk.Button(self, text="Update",
-                        command=lambda: self._handle_update(exercise.id)
+                       command=lambda: self._handle_update(exercise.id)
                        ).grid(row=0, column=4, padx=5)
 
             ttk.Button(self, text="Delete exercise",
@@ -73,7 +73,7 @@ class ExerciseElement(ttk.Frame):
             sets = int(self._sets_entry.get())
             reps = int(self._reps_entry.get())
             weight = float(self._weight_entry.get())
-        except ValueError: 
+        except ValueError:
             return
 
         self._update_callback(exercise_id, day_id, name, sets, reps, weight)

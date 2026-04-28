@@ -5,7 +5,7 @@ class User:
     Attributes:
         username: Merkkijono, joka kuvaa käyttäjän nimimerkkiiä.
         password: Merkkijono, joka kuvaa käyttäjän salasanaa.
-    """    
+    """
 
     def __init__(self, username, password):
         self.username = username
@@ -16,4 +16,4 @@ class User:
     Args:
         username: Merkkijono, joka kuvaa käyttäjän nimimerkkiiä.
         password: Merkkijono, joka kuvaa käyttäjän salasanaa.
-    """    
+    """

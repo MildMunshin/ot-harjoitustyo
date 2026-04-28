@@ -37,5 +37,6 @@ class TestDeleteExercise(unittest.TestCase):
         self.assertEqual(test_exercise[0].name, "Deadlift")
 
         self.exercise_service.delete_exercise(test_exercise[0].id)
-        new_exercise_search = self.exercise_service.get_exercises_by_day(day_id)
+        new_exercise_search = self.exercise_service.get_exercises_by_day(
+            day_id)
         self.assertEqual(new_exercise_search, [])
