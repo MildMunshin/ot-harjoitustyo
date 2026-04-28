@@ -17,4 +17,4 @@ Ei merkittävää tekoälyn käyttöä tai koodin kopioimista. Lyhyet tekoälyn 
 
 ### Viikko 6
 
-Docstring-dokumentaatiossa on otettu laajalti mallia esimerkkisovelluksesta.
+Docstring-dokumentaatiossa on otettu laajalti mallia esimerkkisovelluksesta. Sovelluksen arkkitehtuurikuvauksen rakenteeseen on otettu mallia esimerkkisovelluksesta. Tekoälyn käyttö on merkattu suoraan koodiin.
