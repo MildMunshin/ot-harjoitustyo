@@ -1,11 +1,11 @@
-# Code copied from the reference app
+# Code copied from the reference app (mostly)
 from tkinter import Tk
 from src.ui.ui import UI
 
 
 def main():
     window = Tk()
-    window.title("Todo application")
+    window.title("GymMonsterApp")
 
     ui_view = UI(window)
     ui_view.start()

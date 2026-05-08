@@ -28,11 +28,11 @@ class UserView:
             command=self._handle_create_user_click
         ).grid(row=4, column=0, columnspan=2)
 
-        ttk.Button(
-            self._frame,
-            text="Back to login",
-            command=handle_show_login
-        ).grid(row=5, column=0, columnspan=2)
+        # ttk.Button(
+        #     self._frame,
+        #     text="Back to login",
+        #     command=handle_show_login
+        # ).grid(row=5, column=0, columnspan=2)
 
     def _handle_create_user_click(self):
         username = self._username_entry.get()

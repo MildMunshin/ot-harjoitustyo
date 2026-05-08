@@ -24,22 +24,31 @@ class ExerciseElement(ttk.Frame):
         self._weight_entry = ttk.Entry(self)
         self._weight_entry.grid(row=0, column=3, sticky="ew", padx=5)
 
+        for i in range(6):
+            self.columnconfigure(
+                i,
+                weight=1,
+                uniform="col"
+            )
+
         if exercise:
             self._name_entry.insert(0, exercise.name)
             self._sets_entry.insert(0, exercise.sets)
             self._reps_entry.insert(0, exercise.reps)
             self._weight_entry.insert(0, exercise.weight)
+            # AI code ends here
 
             ttk.Button(self, text="Update",
                        command=lambda: self._handle_update(exercise.id)
-                       ).grid(row=0, column=4, padx=5)
+                       ).grid(row=0, column=4, sticky="ew", padx=5)
 
             ttk.Button(self, text="Delete exercise",
                        # AI code starts here
                        command=lambda: self._handle_delete(exercise.id)
                        # AI code ends here
-                       ).grid(row=0, column=5, padx=5)
+                       ).grid(row=0, column=5, sticky="ew", padx=5)
 
+        # AI code starts here
         else:
             self._name_entry.insert(0, "exercise name")
             self._sets_entry.insert(0, "sets")
@@ -47,10 +56,10 @@ class ExerciseElement(ttk.Frame):
             self._weight_entry.insert(0, "weight")
 
             ttk.Button(self, text="Save", command=self._handle_save).grid(
-                row=0, column=4, padx=5)
-
-        for i in range(6):
-            self.columnconfigure(i, weight=1)
+                row=0, column=4, sticky="ew", padx=5)
+            
+            spacer = ttk.Frame(self)
+            spacer.grid(row=0, column=5, sticky="ew", padx=5)
 
     def _handle_save(self):
         try:
