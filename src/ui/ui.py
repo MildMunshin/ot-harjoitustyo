@@ -1,5 +1,5 @@
 from tkinter import Tk, ttk, constants, Frame, Label, messagebox
-from src.services.user_service import user_service, UsernameExistsError, InvalidCredentialsError
+from src.services.user_service import user_service, UsernameExistsError, InvalidCredentialsError, UsernameTooShortError, PasswordTooShortError, PasswordsDoNotMatchError
 from src.services.day_service import day_service
 from src.ui.login_view import LoginView
 from src.ui.user_view import UserView
@@ -191,6 +191,13 @@ class UI:
             self._show_login_view() 
         except UsernameExistsError:
             print("Username already exists")
+        except UsernameTooShortError:
+            print("User name is too short")
+        except PasswordTooShortError:
+            print("Password is too short")
+        except PasswordsDoNotMatchError:
+            print("Passwords don't match")
+        
 
     def _render_days(self):
         for child in self._sidebar.winfo_children():

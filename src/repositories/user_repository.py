@@ -28,6 +28,13 @@ class UserRepository:
         rows = cursor.fetchall()
 
         return [User(row["username"], row["password"]) for row in rows]
+    
+    def delete_all(self):
+        cursor = self._connection.cursor()
+
+        cursor.execute("DELETE FROM users")
+
+        self._connection.commit()
 
     def create(self, user: User):
         """Luo uuden käyttäjän.

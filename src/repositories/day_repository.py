@@ -67,5 +67,15 @@ class DayRepository:
 
         self._connection.commit()
 
+    def delete_all(self):
+        
+        cursor = self._connection.cursor()
+
+        cursor.execute(
+            "DELETE FROM days"
+        )
+
+        self._connection.commit()
+
 
 day_repository = DayRepository(get_database_connection())

@@ -71,6 +71,13 @@ class ExerciseRepository:
 
         self._connection.commit()
 
+    def delete_all(self):
+        cursor = self._connection.cursor()
+
+        cursor.execute("DELETE FROM exercises")
+
+        self._connection.commit()
+
     # AI code starts here
     def update(self, exercise):
         """Päivittää harjoitteen arvoja.

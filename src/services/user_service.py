@@ -1,35 +1,13 @@
 from src.repositories.user_repository import user_repository as default_user_repository
 from src.entities.user import User
 
-
-class InvalidCredentialsError(Exception):
-    pass
-    """Luokka, joka ilmoittaa väärästä käyttäjänimestä tai salasanasta.
-    """
-
-
-class UsernameExistsError(Exception):
-    pass
-    """Luokka, joka ilmoittaa olemassa olevasta käyttäjänimestä.
-    """
-
-
-class UsernameTooShortError(Exception):
-    pass
-    """Luokka, joka ilmoittaa liian lyhyestä käyttäjänimestä.
-    """
-
-
-class PasswordTooShortError(Exception):
-    pass
-    """Luokka, joka ilmoittaa liian lyhyestä salasanasta.
-    """
-
-
-class PasswordsDoNotMatch(Exception):
-    pass
-    """Luokka, joka ilmoittaa jos salasanat eivät täsmää käyttäjän luomisen yhteydessä.
-    """
+from src.errors.user_errors import (
+    InvalidCredentialsError,
+    UsernameExistsError,
+    UsernameTooShortError,
+    PasswordTooShortError,
+    PasswordsDoNotMatchError
+)
 
 
 class UserService:
@@ -65,22 +43,22 @@ class UserService:
         """
 
         if len(username) < 5:
-            print("username is too short")
-            raise UsernameTooShortError
+            # print("username is too short")
+            raise UsernameTooShortError()
 
         if password != password2:
-            print("passwords don't match")
-            raise PasswordsDoNotMatch
+            # print("passwords don't match")
+            raise PasswordsDoNotMatchError()
 
         if len(password) < 5:
-            print("password is too short")
-            raise PasswordTooShortError
+            # print("password is too short")
+            raise PasswordTooShortError()
 
         existing = self._user_repository.find_by_username(username)
 
         if existing:
-            print("username already exists")
-            raise UsernameExistsError
+            # print("username already exists")
+            raise UsernameExistsError()
 
         user = self._user_repository.create(User(username, password))
         if login:

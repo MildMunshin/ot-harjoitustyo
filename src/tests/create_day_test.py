@@ -9,16 +9,17 @@ from src.entities.day import Day
 from src.repositories.user_repository import user_repository
 from src.repositories.exercise_repository import exercise_repository
 from src.repositories.day_repository import day_repository
-from src.initialize_database import initialize_database
 
 
 class TestCreateDay(unittest.TestCase):
 
     def setUp(self):
-        # The test now wipes out the whole database also outside the test. Going to fix that later
-        initialize_database()
+
+        day_repository.delete_all()
+        user_repository.delete_all()
         self.user_service = UserService()
         self.day_service = DayService()
+
 
     def test_create_day(self):
         self.user_service.create_user(

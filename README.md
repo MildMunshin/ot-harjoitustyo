@@ -9,7 +9,9 @@ Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehitykses
 - Asenna riippuvuudet:
   ```bash
   poetry install
+  poetry add python-dotenv
   ```
+
 - Luo data-kansio sovelluksen juuressa:
   ```bash
   mkdir data
