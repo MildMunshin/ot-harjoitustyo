@@ -34,6 +34,8 @@ class ExerciseRepository:
         )
 
         self._connection.commit()
+        exercise.id = cursor.lastrowid
+
         return exercise
 
     def find_by_day(self, day_id):
