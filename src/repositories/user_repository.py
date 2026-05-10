@@ -76,6 +76,9 @@ class UserRepository:
             return User(row["username"], row["password"])
 
         return None
+    
+# def create_user_repository(connection):
+#     return UserRepository(connection)
 
 
 user_repository = UserRepository(get_database_connection())
