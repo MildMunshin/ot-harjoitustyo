@@ -10,10 +10,6 @@ Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehitykses
   ```bash
   poetry install
   ```
-- Luo data-kansio sovelluksen juuressa:
-  ```bash
-  mkdir data
-  ```
 - Alusta tietokanta:
   ```bash
   poetry run python -m src.initialize_database
