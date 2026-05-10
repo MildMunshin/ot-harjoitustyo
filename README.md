@@ -2,7 +2,7 @@
 
 ## Sovelluksen kuvaus
 
-Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehityksestään. Sovelluksessa käyttäjä voi määritellä itselleen useasta eri päivästä koostuvan saliohjelman. Jokaiselle päivälle voi määritellä tietyt liikkeet, niiden toistokerrat ja käytetyt painot. Sovelluksen avulla käyttäjä pystyy seuraamaan mikä päiväohjelma on seuraavaksi, millä painoilla ja toistoilla liikkeitä on tehty sekä päivittämään niiden arvoja.
+Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehityksestään. Sovelluksessa käyttäjä voi määritellä itselleen useasta eri päivästä koostuvan saliohjelman. Jokaiselle päivälle voi määritellä tietyt liikkeet, niiden toistokerrat ja käytetyt painot. Sovelluksen avulla käyttäjä pystyy seuraamaan päiväohjelmiaan, millä painoilla ja toistoilla liikkeitä on tehty sekä päivittämään niiden arvoja.
 
 ## Asennus
 
@@ -49,3 +49,5 @@ Sovelluksessa käyttäjä voi pitää kirjaa kuntosaliohjelmastaan ja kehitykses
 - [AI:n käyttö ja koodin kopioiminen](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/AI:n_kaytto_ja_koodin_kopioiminen.md)
 - [Changelog](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 - [Arkkitehtuuri](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+- [Käyttöohje](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+- [Testausdokumentti](https://github.com/MildMunshin/ot-harjoitustyo/blob/master/dokumentaatio/testausdocumentti.md)
