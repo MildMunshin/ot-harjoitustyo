@@ -85,7 +85,7 @@ from src.services.day_service import day_service
 
 #         self._render_days()
 
-class DayView: 
+class DayView:
     def __init__(self, root, back_to_login, show_exercises_view, user):
         self._frame = ttk.Frame(master=root)
         self._user = user

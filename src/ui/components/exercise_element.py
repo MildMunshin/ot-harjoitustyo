@@ -57,7 +57,7 @@ class ExerciseElement(ttk.Frame):
 
             ttk.Button(self, text="Save", command=self._handle_save).grid(
                 row=0, column=4, sticky="ew", padx=5)
-            
+
             spacer = ttk.Frame(self)
             spacer.grid(row=0, column=5, sticky="ew", padx=5)
 

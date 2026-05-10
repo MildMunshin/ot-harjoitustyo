@@ -5,6 +5,7 @@ from src.services.user_service import UserService
 from src.entities.user import User
 from src.repositories.user_repository import UserRepository
 
+
 class TestUserLogin(unittest.TestCase):
 
     def setUp(self):

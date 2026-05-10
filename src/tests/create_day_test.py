@@ -38,12 +38,10 @@ class TestCreateDay(unittest.TestCase):
             )
         ''')
 
-
         self.day_repository = DayRepository(self.connection)
         self.user_repository = UserRepository(self.connection)
         self.user_service = UserService(self.user_repository)
         self.day_service = DayService(self.day_repository)
-
 
     def test_create_day(self):
         self.user_service.create_user(

@@ -5,6 +5,7 @@ from src.services.user_service import UserService
 from src.repositories.user_repository import UserRepository
 from src.entities.user import User
 
+
 class TestCreateUser(unittest.TestCase):
 
     def setUp(self):
@@ -23,7 +24,6 @@ class TestCreateUser(unittest.TestCase):
 
         self.user_repository = UserRepository(self.connection)
         self.service = UserService(self.user_repository)
-
 
     def test_create_user(self):
         self.service.create_user(

@@ -55,7 +55,14 @@ class ExerciseRepository:
         )
         rows = cursor.fetchall()
 
-        return [Exercise(row["id"], row["day_id"], row["name"], row["sets"], row["reps"], row["weight"]) for row in rows]
+        return [
+            Exercise(
+                row["id"],
+                row["day_id"],
+                row["name"],
+                row["sets"],
+                row["reps"],
+                row["weight"]) for row in rows]
 
     def delete(self, exercise_id):
         """Poistaa valitun harjoitteen.

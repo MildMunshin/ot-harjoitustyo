@@ -15,13 +15,14 @@ class UserService:
     """
 
     def __init__(self, user_repository=default_user_repository):
-        self._user_repository = user_repository
-        # self._user = None
-        """Luokan konstruktori, joka luo harjoitteisiin liittyvästä sovelluslogiikasta vastaavan palvelun.
+        """Luokan konstruktori.
 
         Args:
             user_repository: Olio, jolla on UserRepository-luokkaa vastaavat metodit.
         """
+
+        self._user_repository = user_repository
+        self._user = None
 
     def create_user(self, username, password, password2, login=True):
         """Luo uuden käyttäjän.
@@ -30,11 +31,13 @@ class UserService:
             username: Merkkijono, joka kuvaa käyttäjän nimimerkkiä
             password: Merkkijono, joka kuvaa käyttäjän salasanaa
             password2: Merkkijono, joka varmistaa, että käyttäjä on syöttänyt salasanan oikein.
-            login: Boolean-arvo, joka kertoo kirjataanko käyttäjä sisään onnistuneen luonnin jälkeen.
+            login: Boolean-arvo, joka kertoo kirjataanko käyttäjä sisään
+            onnistuneen luonnin jälkeen.
 
         Raises:
             UsernameTooShortError: Virhe, joka ilmoittaa liian lyhyestä käyttäjänimestä.
-            PasswordsDoNotMatch: Virhe, joka ilmoittaa jos salasanat eivät täsmää käyttäjän luomisen yhteydessä.
+            PasswordsDoNotMatch: Virhe, joka ilmoittaa jos salasanat eivät täsmää käyttäjän
+            luomisen yhteydessä.
             PasswordTooShortError: Virhe, joka ilmoittaa liian lyhyestä käyttäjänimestä.
             UsernameExistsError: Virhe, joka ilmoittaa olemassa olevasta käyttäjänimestä.
 

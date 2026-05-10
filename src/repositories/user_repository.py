@@ -28,7 +28,7 @@ class UserRepository:
         rows = cursor.fetchall()
 
         return [User(row["username"], row["password"]) for row in rows]
-    
+
     def delete_all(self):
         cursor = self._connection.cursor()
 
@@ -76,7 +76,7 @@ class UserRepository:
             return User(row["username"], row["password"])
 
         return None
-    
+
 # def create_user_repository(connection):
 #     return UserRepository(connection)
 

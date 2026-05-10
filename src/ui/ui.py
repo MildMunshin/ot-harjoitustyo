@@ -6,6 +6,7 @@ from src.ui.user_view import UserView
 from src.ui.day_view import DayView
 from src.ui.exercises_view import ExercisesView
 
+
 class UI:
     def __init__(self, root):
         self._root = root
@@ -18,7 +19,6 @@ class UI:
     def start(self):
         self._build_layout()
         self._show_login_view()
-        
 
     def _build_layout(self):
         # AI code starts here
@@ -32,7 +32,7 @@ class UI:
 
         # self._container.grid()
 
-        #AI code starts here
+        # AI code starts here
         self._header = Frame(self._root, height=50, bg="red")
         self._header.grid(row=0, column=0, columnspan=2, sticky="ew")
 
@@ -52,13 +52,13 @@ class UI:
             bg="red"
         ).grid(row=0, column=1, sticky="e", padx=10, pady=10)
 
-        #AI code starts here
+        # AI code starts here
         self._sidebar = Frame(self._root, width=300, bg="gray")
         self._sidebar.grid(row=1, column=0, sticky="nsew")
 
         self._sidebar.grid_columnconfigure(0, weight=1)
         self._sidebar.grid_columnconfigure(1, weight=1)
-        # self._sidebar.grid_columnconfigure(2, weight=1) 
+        # self._sidebar.grid_columnconfigure(2, weight=1)
 
         self._container = ttk.Frame(self._root)
         self._container.grid(row=1, column=1, sticky="nsew")
@@ -188,7 +188,7 @@ class UI:
         try:
             user_service.create_user(username, password, password2)
             print("User created")
-            self._show_login_view() 
+            self._show_login_view()
         except UsernameExistsError:
             print("Username already exists")
         except UsernameTooShortError:
@@ -197,7 +197,6 @@ class UI:
             print("Password is too short")
         except PasswordsDoNotMatchError:
             print("Passwords don't match")
-        
 
     def _render_days(self):
         for child in self._sidebar.winfo_children():
@@ -227,7 +226,7 @@ class UI:
                 self._sidebar,
                 text=day.day_name,
                 command=lambda d=day: self._show_exercises_view(d)
-            # AI code starts here
+                # AI code starts here
             ).grid(row=row, column=0, sticky="ew", padx=5, pady=5)
             # AI code ends here
 
@@ -235,12 +234,11 @@ class UI:
                 self._sidebar,
                 text="Delete",
                 command=lambda d=day: self._delete_day(d)
-            # AI code starts here
+                # AI code starts here
             ).grid(row=row, column=1, sticky="ew", padx=5, pady=5)
 
             row += 1
             # AI code ends here
-
 
     def _delete_day(self, day):
         response = messagebox.askyesno(

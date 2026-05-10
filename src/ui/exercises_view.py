@@ -41,7 +41,7 @@ class ExercisesView:
         # AI code starts here
         row = len(self._exercises_container.winfo_children())
         # AI code ends here
-        
+
         element = ExerciseElement(
             self._exercises_container,
             self._current_day,
@@ -80,7 +80,6 @@ class ExercisesView:
 
         exercises = self._exercise_service.get_exercises_by_day(
             self._current_day.id)
-        
 
         if len(exercises) > 0:
             ttk.Label(self._exercises_container, text="Exercise").grid(
@@ -91,8 +90,10 @@ class ExercisesView:
                 row=0, column=2, sticky="ew", padx=5)
             ttk.Label(self._exercises_container, text="Weight").grid(
                 row=0, column=3, sticky="ew", padx=5)
-            ttk.Label(self._exercises_container, text="").grid(row=0, column=4, sticky="ew", padx=5)
-            ttk.Label(self._exercises_container, text="").grid(row=0, column=5, sticky="ew", padx=5)
+            ttk.Label(self._exercises_container, text="").grid(
+                row=0, column=4, sticky="ew", padx=5)
+            ttk.Label(self._exercises_container, text="").grid(
+                row=0, column=5, sticky="ew", padx=5)
 
         for row, ex in enumerate(exercises, start=1):
             element = ExerciseElement(

@@ -15,14 +15,15 @@ class DayService:
         """
 
     def create_day(self, username, day_name):
-        self._day_repository.create(Day(None, username, day_name))
-        # "None" added/fixed by AI
         """Luo uuden päivän.
 
         Args:
             username: Merkkijono, joka kuvaa käyttäjänimeä, jolla päivä kuuluu.
             day_name: Merkkijono, joka kuvaa päivän nimeä.
         """
+
+        # "None" added/fixed by AI
+        self._day_repository.create(Day(None, username, day_name))
 
     def get_days_by_user(self, username):
         """Palauttaa kaikki käyttäjän päivät.
@@ -36,12 +37,13 @@ class DayService:
         return self._day_repository.find_by_username(username)
 
     def delete_day(self, day):
-        self._day_repository.delete_day(day)
         """Poistaa valitun päivän päivänäkymästä
 
         Args:
             day: Päivä-olio, jonka käyttäjä on valinnut poistettavaksi. 
         """
+
+        self._day_repository.delete_day(day)
 
 
 day_service = DayService()

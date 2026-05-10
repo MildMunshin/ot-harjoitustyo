@@ -7,20 +7,22 @@ class ExerciseService:
     """
 
     def __init__(self, exercise_repository=default_exercise_repository):
-        self._exercise_repository = exercise_repository
-        # self._exercise = None
-        """Luokan konstruktori, joka luo harjoitteisiin liittyvästä sovelluslogiikasta vastaavan palvelun.
+        """Luokan konstruktori, joka luo harjoitteisiin liittyvästä 
+        sovelluslogiikasta vastaavan palvelun.
 
         Args:
             exercise_repository: Olio, jolla on ExerciseRepository-luokkaa vastaavat metodit.
         """
+
+        self._exercise_repository = exercise_repository
 
     # Ai code begins
     def create_exercise(self, day_id, name, sets, reps, weight):
         """Luo uuden harjoitteen.
 
         Args:
-            day_id: Kokonaisluku, joka kuvaa uniikkia id-tunnistetta päivälle, johon harjoite luodaan.
+            day_id: Kokonaisluku, joka kuvaa uniikkia id-tunnistetta päivälle,
+            johon harjoite luodaan.
             name: Merkkijono, joka kuvaa harjoitteen nimeä.
             sets: Kokonaisluku, joka kuvaa sarjojen määrää.
             reps: Kokonaisluku, joka kuvaa toistojen määrää.
@@ -47,19 +49,21 @@ class ExerciseService:
     # Ai code ends
 
     def delete_exercise(self, exercise_id):
-        self._exercise_repository.delete(exercise_id)
         """Poistaa valitun harjoitteen.
 
         Args:
             exercise_id: Kokonaisluku, joka kuvaa harjoitteen uniikkia id-tunnusta.
         """
 
+        self._exercise_repository.delete(exercise_id)
+
     def update_exercise(self, exercise_id, day_id, name, sets, reps, weight):
         """Päivittää valitun harjoitteen arvoja.
 
         Args:
             exercise_id: Kokonaisluku, joka kuvaa harjoitteen uniikkia id-tunnusta.
-            day_id: Kokonaisluku, joka kuvaa uniikkia id-tunnistetta päivälle, johon harjoite luodaan.
+            day_id: Kokonaisluku, joka kuvaa uniikkia id-tunnistetta päivälle,
+            johon harjoite luodaan.
             name: Merkkijono, joka kuvaa harjoitteen nimeä.
             sets: Kokonaisluku, joka kuvaa sarjojen määrää.
             reps: Kokonaisluku, joka kuvaa toistojen määrää.

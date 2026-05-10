@@ -14,7 +14,6 @@ from src.repositories.exercise_repository import ExerciseRepository
 from src.repositories.day_repository import DayRepository
 
 
-
 class TestCreateExercise(unittest.TestCase):
 
     def setUp(self):
