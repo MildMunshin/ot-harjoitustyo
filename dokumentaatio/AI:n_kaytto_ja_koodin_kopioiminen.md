@@ -18,3 +18,7 @@ Ei merkittävää tekoälyn käyttöä tai koodin kopioimista. Lyhyet tekoälyn 
 ### Viikko 6
 
 Docstring-dokumentaatiossa on otettu laajalti mallia esimerkkisovelluksesta. Sovelluksen arkkitehtuurikuvauksen rakenteeseen on otettu mallia esimerkkisovelluksesta. Tekoälyn käyttö on merkattu suoraan koodiin.
+
+### Viikko 7
+
+AI:n käyttö merkitty suoraan koodiin. Vaikka testeissä ei saanut käyttää tekoälyä, jouduin kuitenkin turvautumaan sen apuun ratkaistessani ongelmaa, jossa testit vaikuttivat suoraan oikeaan tietokantaan.

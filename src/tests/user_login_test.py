@@ -1,7 +1,7 @@
 import unittest
 import sqlite3
 
-from src.services.user_service import UserService
+from src.services.user_service import UserService, InvalidCredentialsError
 from src.entities.user import User
 from src.repositories.user_repository import UserRepository
 
@@ -47,7 +47,7 @@ class TestUserLogin(unittest.TestCase):
         self.user_repository = UserRepository(self.connection)
         self.user_service = UserService(self.user_repository)
 
-    def test_create_user(self):
+    def test_user_login(self):
         self.user_service.create_user(
             "Test-Matthew", "testpassword123", "testpassword123")
         this_should_return_user = self.user_service.login(
@@ -56,3 +56,16 @@ class TestUserLogin(unittest.TestCase):
               this_should_return_user.password)
         self.assertEqual(("Test-Matthew", "testpassword123"),
                          (this_should_return_user.username, this_should_return_user.password))
+        self.user_service.login("Test-Matthew", "testpassword123")
+
+    def test_failed_login(self):
+        self.user_service.create_user(
+            "Test-Dork", "testpassword666", "testpassword666")
+        with self.assertRaises(InvalidCredentialsError):
+            self.user_service.login("Test-Matthew", "testpassword123")
+
+    def test_wrong_password(self):
+        self.user_service.create_user(
+            "Test-Dork", "testpassword666", "testpassword666")
+        with self.assertRaises(InvalidCredentialsError):
+            self.user_service.login("Test-Dork", "testpassword444")
