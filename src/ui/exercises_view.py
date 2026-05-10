@@ -11,17 +11,6 @@ class ExercisesView:
         self._exercise_service = exercise_service
         self._exercises_container = ttk.Frame(self._frame)
 
-        # ttk.Button(
-        #     self._frame,
-        #     text="Back",
-        #     command=back_to_days
-        # ).grid(row=0, column=0, columnspan=2, pady=10)
-
-        # ttk.Label(
-        #     self._frame,
-        #     text="Exercises"
-        # ).grid(row=1, column=0, columnspan=2, sticky=constants.W, padx=55, pady=55)
-
         self._exercises_container.grid(row=2)
 
         for i in range(6):

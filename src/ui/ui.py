@@ -30,8 +30,6 @@ class UI:
         self._root.grid_rowconfigure(1, minsize=300)
         # AI code ends here
 
-        # self._container.grid()
-
         # AI code starts here
         self._header = Frame(self._root, height=50, bg="red")
         self._header.grid(row=0, column=0, columnspan=2, sticky="ew")
@@ -39,12 +37,6 @@ class UI:
         self._header.grid_columnconfigure(0, weight=1)
         self._header.grid_columnconfigure(1, weight=1)
         # AI code ends here
-
-        # ttk.Button(
-        #     self._header,
-        #     text="Logout",
-        #     command=self._show_login_view
-        # ).grid(row=0, column=0, sticky="w", padx=10, pady=10)
 
         Label(
             self._header,
@@ -144,17 +136,6 @@ class UI:
         )
         self._current_view.pack()
 
-    # def _show_day_view(self):
-    #     if self._current_view:
-    #         self._current_view.destroy()
-    #     self._current_view = DayView(
-    #         self._container,
-    #         self._show_login_view,
-    #         self._show_exercises_view,
-    #         self._current_user
-    #     )
-    #     self._current_view.pack()
-
     def _show_day_view(self):
         # self._header.grid()
         self._sidebar.grid()
@@ -202,7 +183,6 @@ class UI:
         for child in self._sidebar.winfo_children():
             child.destroy()
 
-        # ttk.Label(self._sidebar, text="Add New Day").grid(row=0, column=0)
         self._day_name_entry = ttk.Entry(master=self._sidebar)
         self._day_name_entry.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
         ttk.Button(
@@ -261,8 +241,3 @@ class UI:
         self._day_name_entry.delete(0, "end")
         self._render_days()
         # AI code ends here
-
-    # def _open_day(self, day):
-    #     self._show_exercises_view(day)
-    #     print(
-    #         f"Opening day: {day.day_name}, id={day.id}, username={day.username}")

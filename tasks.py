@@ -1,6 +1,5 @@
 from invoke import task
 
-# Doesn't use index.py yet. This will be fixed.
 @task
 def start(ctx):
     ctx.run("python3 -m src.index", pty=True)

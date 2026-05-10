@@ -111,5 +111,4 @@ class ExerciseRepository:
         return exercise
     # AI code ends here
 
-
 exercise_repository = ExerciseRepository(get_database_connection())

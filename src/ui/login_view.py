@@ -24,12 +24,6 @@ class LoginView:
             command=self._handle_login_click
         ).grid(row=3, column=0, columnspan=2)
 
-        # ttk.Button(
-        #     self._frame,
-        #     text="Create user",
-        #     command=handle_show_create_user
-        # ).grid(row=4, column=0, columnspan=2)
-
     def _handle_login_click(self):
         username = self._username_entry.get()
         password = self._password_entry.get()
