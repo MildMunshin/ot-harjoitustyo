@@ -9,12 +9,12 @@ Sovellus aukeaa kirjautumisnäkymään, josta onnistuneen kirjautumisen seurauks
 - Käyttäjä voi luoda tunnuksen, joka on uniikki ja vähintään 5 merkkiä [TEHTY]
 - Käyttäjä voi kirjautua sisään oikealla salasanalla. Jos salasana on väärä tai käyttäjää ei olemassa, järjestelmä ilmoittaa tästä. [TEHTY]
 - Onnistuneen kirjautumisen jälkeen käyttäjä näkee päivät, joihin saliohjelman eri liikeet on allokoitu [TEHTY]
-- Käyttäjä voi luoda, poistaa ja muokata päiviä [OSITTAIN TEHTY]
+- Käyttäjä voi luoda, poistaa ja muokata päiviä [TEHTY]
 - Saliohjelma ja päivät näkyvät vain kirjautuneelle käyttäjälle [TEHTY]
-- Tässä näkymässä voi myös kirjautua ulos [OSITTAIN TEHTY]
+- Tässä näkymässä voi myös kirjautua ulos [TEHTY]
 - Tiettyä päivää klikkaamalla käyttäjä näkee kyseiseen päivään kuuluvat liikkeet, niiden toistokerrat ja käytetyt painot [TEHTY]
 - Käyttäjä voi muokata, poistaa tai päivittää tehtäviä liikkeitä, niiden toistokertoja ja käytettyjä painoja [TEHTY]
-- Tästä näkymästä käyttäjä voi myös palata etusivulle
+- Tästä näkymästä käyttäjä voi myös palata etusivulle [TEHTY]
 
 ## Jatkokehitysideoita
 
