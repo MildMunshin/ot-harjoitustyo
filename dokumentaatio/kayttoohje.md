@@ -45,4 +45,7 @@ Klikkaamalla päivää näet sen sisältämät harjoitteet. Uusia harjoitteita v
 
 Tämän jälkeen voit syöttää uuden harjoitteen nimen, sarjojen ja toistojen määrän sekä käytetyn painon. Tallenna harjoite painamalla "Save"-painiketta.
 
+
+<img width="1343" height="347" alt="Screenshot from 2026-05-10 20-01-43" src="https://github.com/user-attachments/assets/9dae359a-8aca-4a07-baa8-2cbfcbbae0c4" />
+
 Tämän jälkeen voit luoda lisää harjoitteita, tai päivittää olemassa olevia harjoitteta syöttämällä uusia arvoja syötekenttiin ja painamalla "Update". Harjoitteen voi poistaa painamalla "Delete exercise" -painiketta.
