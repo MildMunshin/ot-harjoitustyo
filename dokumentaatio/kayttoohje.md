@@ -1,16 +1,12 @@
 # Käyttöohje
 
-Lataa projektin viimeisin release tästä(linkki)
+Lataa projektin viimeisin release [täältä]([linkki](https://github.com/MildMunshin/ot-harjoitustyo/releases/tag/viikko7))
 
 ## Ohjelman käynnistäminen
 
 - Asenna riippuvuudet:
   ```bash
   poetry install
-  ```
-- Luo data-kansio sovelluksen juuressa:
-  ```bash
-  mkdir data
   ```
 - Alusta tietokanta:
   ```bash
