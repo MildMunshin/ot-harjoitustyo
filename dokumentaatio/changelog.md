@@ -19,3 +19,7 @@
 ### Viikko 6
 
 - Käyttäjä voi muokata harjoitteita. Tähän kuuluvat harjoitteen nimi, sarjat, toistokerrat sekä käytetty paino.
+
+### Viikko 7
+
+- Sovelluksessa on viimestellympi ulkoasu, joka näyttää eri päivät pääikkunan vasemmalla puolella ja valitun päivän sisältämät harjoitteet pääikkunan oikealla puolella.
