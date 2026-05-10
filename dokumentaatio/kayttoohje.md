@@ -1,6 +1,7 @@
 # Käyttöohje
 
-Lataa projektin viimeisin release [täältä]([linkki](https://github.com/MildMunshin/ot-harjoitustyo/releases/tag/viikko7))
+Lataa projektin viimeisin release täältä:
+- [GymMonsterApp]([linkki](https://github.com/MildMunshin/ot-harjoitustyo/releases/tag/viikko7))
 
 ## Ohjelman käynnistäminen
 
